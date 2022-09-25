@@ -1,0 +1,26 @@
+ 
+    <%- include('./partials/header.ejs') %> 
+    <%- include('./partials/nav.ejs') %> 
+
+<div class="container">
+        <% const name="jomobrain1" %> 
+        <%= name %> 
+        <h1>Homeeeee</h1>
+        <% if(blogs.length>0){ %>
+
+        <% blogs.forEach(b=>{%> 
+           <a href="/blogs/<%= b._id %>" class="view">View</a>
+        <p><%= b.title %> 
+        
+        </p>
+        <b><%= b.body %> </b>
+        <% } )%> 
+
+        <% } else { %> 
+
+            <p>No Blogs</p>
+        <% } %> 
+</div>
+
+</body>
+</html>
